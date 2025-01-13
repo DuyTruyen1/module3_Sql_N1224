@@ -4,14 +4,14 @@ create table product (
   id int primary key auto_increment,
   name varchar(200) not null,
   description varchar(255) null,
-  price double null,
+  price decimal null,
   quantity int null
 );
 
 alter table product add stock int;
 
-INSERT INTO product (name, description, price, quantity, stock) 
-VALUES ('laptop', 'A high-performance laptop suitable for gaming and work.', 23.500, 20, 45),
+insert into product (name, description, price, quantity, stock) 
+values ('laptop', 'A high-performance laptop suitable for gaming and work.', 23.500, 20, 45),
 	   ('pc', 'A high-performance pc suitable for gaming and work.', 15.300, 25, 35);
        
 update product 
@@ -30,16 +30,16 @@ where price < 23.5;
 
 
 set sql_safe_updates = 0;
-UPDATE product
-SET stock = 50;
+update product
+set stock = 50;
 
 set sql_safe_updates = 1;
-UPDATE product
-SET price = 20.000
-WHERE id = 1;
+update product
+set price = 20.000
+where id = 1;
 
-DROP database quan_ly_cua_hang;
+drop database quan_ly_cua_hang;
 
-DROP database if exists quan_ly_cua_hang;
+drop database if exists quan_ly_cua_hang;
 
 
