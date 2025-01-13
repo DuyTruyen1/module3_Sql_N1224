@@ -27,3 +27,19 @@ from product;
 select id , name , price
 from product
 where price < 23.5;
+
+
+set sql_safe_updates = 0;
+UPDATE product
+SET stock = 50;
+
+set sql_safe_updates = 1;
+UPDATE product
+SET price = 20.000
+WHERE id = 1;
+
+DROP database quan_ly_cua_hang;
+
+DROP database if exists quan_ly_cua_hang;
+
+
