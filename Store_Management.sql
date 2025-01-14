@@ -1,6 +1,6 @@
-use quan_ly_cua_hang;
+use store_management;
 
-create table product (
+create table store_management (
   id int primary key auto_increment,
   name varchar(200) not null,
   description varchar(255) null,
